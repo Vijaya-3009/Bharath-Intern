@@ -1,142 +1,205 @@
-<html>
-    <style>
-        {
-        box-sizing: border-box;
-    }
-    .button-tool-pathgriho {
-        border-radius: 20px;
-        padding:18px;
-        background-color: rgb(253, 17, 57);
-        color: white;
-        font-size: 15px;
-        
-        
-    }
-    .button-tool-pathgriho:hover {
-        background-color: rgb(10, 206, 206);
-        color: black;
-    }
-   .pathgriho-box {
-        width: 60%;
-        height: 32px;
-        border-radius: 15px;
-   }
-    </style>
-    <div  style="text-align: center;">
-<form name="circle">
-    <h2>Celsius To Fahrenheit</h2>
-    <br/>
-    <input class="pathgriho-box" type="text" name="radius" placeholder="Enter the Celsius Value" size="20"><br /><br/>
-    <input class="button-tool-pathgriho" type="button" value="Convert to Fahrenheit" onClick="calculateAC()"><br /><br/>        
-    <input type="text" name="acc" class="pathgriho-box" placeholder="Fahrenheit Value is here" size="20"><br /><br/>
-    <input class="button-tool-pathgriho" type="reset" value="Try Another One" />
-    <br/><br/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Landing Page Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="showcase">
+        <div class="showcase-top">
+            <img src="https://i.ibb.co/r5krrdz/logo.png" alt="" />
+            <a href="#" class="btn btn-rounded">Sign In</a>
+        </div>
+        <div class="showcase-content">
+            <h1>See what's next</h1>
+            <p>Watch anywhere. Cancel Anytime</p>
+            <a href="#" class="btn btn-xl"
+                >Watch Free For 30 Days <i class="fas fa-chevron-right btn-icon"></i
+            ></a>
+        </div>
+    </header>
+    <section class="tabs">
+        <div class="container">
+            <div id="tab-1" class="tab-item tab-border">
+                <i class="fas fa-door-open fa-3x"></i>
+                <p class="hide-sm">Cancel at any time</p>
+            </div>
+            <div id="tab-2" class="tab-item">
+                <i class="fas fa-tablet-alt fa-3x"></i>
+                <p class="hide-sm">Watch anywhere</p>
+            </div>
+            <div id="tab-3" class="tab-item">
+                <i class="fas fa-tags fa-3x"></i>
+                <p class="hide-sm">Pick your price</p>
+            </div>
+        </div>
+    </section>
 
-</form>
-<form name="ck">
-    <h2>Celsius to Kelvin</h2>
-    <br/>
-    <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Enter the Celsius value" size="20"><br /><br/>
-    <input class="button-tool-pathgriho" type="button" value="Convert to Kelvin" onClick="calculateCK()"><br /><br/>
-    <input type="text" name="adc" class="pathgriho-box" placeholder="Kelvin value is here" size="20"><br /><br/>
-    <input class="button-tool-pathgriho"  type="reset" value="Try Another One" />
-    <br/><br/>
-</form>
-<form name="fc">
-    <h2>Fahrenheit to Celsius</h2>
-    <br/>
-    <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Value at Fahrenheit" size="20"><br /><br/>
-    <input class="button-tool-pathgriho" type="button" value="Convert to Celsius" onClick="calculateFC()"><br /><br/>
-    <input type="text" name="accc" class="pathgriho-box" placeholder="Celsius value is here" size="20"><br /><br/>
-    <input class="button-tool-pathgriho"  type="reset" value="Try Another One" />
-    <br/><br/>
-</form>
-<form name="fk">
-    <h2>Fahrenheit to Kelvin</h2>
-    <br/>
-    <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Enter the Fahrenheit Value" size="20"><br /><br/>
-    <input class="button-tool-pathgriho" type="button" value="Convert to Kelvin" onClick="calculateFK()"><br /><br/>
-    <input type="text" name="ad" class="pathgriho-box" placeholder="Kelvin value is here" size="20"><br /><br/>
-    <input class="button-tool-pathgriho"  type="reset" value="Try Another One" />
-    <br/><br/>
-</form>
-<form name="kc">
-    <h2>Kelvin to Celsius</h2>
-    <br/>
-    <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Enter the Kelvin Value" size="20"><br /><br/>
-    <input class="button-tool-pathgriho" type="button" value="Convert to Celsius" onClick="calculateKC()"><br /><br/>
-    <input type="text" name="rabiul" class="pathgriho-box" placeholder="Celsius value is here" size="20"><br /><br/>
-    <input class="button-tool-pathgriho"  type="reset" value="Try Another One" />
-    <br/><br/>
-</form>
-<form name="kf">
-    <h2>Kelvin to Fahrenheit</h2>
-    <br/>
-    <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Enter the Kelvin Value" size="20"><br /><br/>
-    <input class="button-tool-pathgriho" type="button" value="Convert to Fahrenheit" onClick="calculateKF()"><br /><br/>
-    <input type="text" name="roko" class="pathgriho-box" placeholder="Fahrenheit value is here" size="20"><br /><br/>
-    <input class="button-tool-pathgriho" type="reset" value="Try Another One" />
-    <br/><br/>
-</form>
-</div>
-<script>
-    function calculateAC() {
-    var radius = document.circle.radius.value;
-    var unit = " degree Fahrenheit"
-   
-    var finalAC = (radius*1.8)+32;
-    
-    document.circle.acc.value = (finalAC.toFixed(2)+unit);
+    <section class="tab-content">
+        <div class="container">
+            <!-- Tab Content 1 -->
+            <div id="tab-1-content" class="tab-content-item show">
+                <div class="tab-1-content-inner">
+                    <div>
+                        <p class="text-lg">
+                            If you decide Netflix isn't for you - no problem. No commitment.
+                            Cancel online anytime.
+                        </p>
+                        <a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+                    </div>
+                    <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="" />
+                </div>
+            </div>
 
-    }
+            <!-- Tab Content 2 -->
+            <div id="tab-2-content" class="tab-content-item">
+                <div class="tab-2-content-top">
+                    <p class="text-lg">
+                        Watch TV shows and movies anytime, anywhere — personalized for
+                        you.
+                    </p>
+                    <a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+                </div>
+                <div class="tab-2-content-bottom">
+                    <div>
+                        <img src="https://i.ibb.co/DpdN7Gn/tab-content-2-1.png" alt="" />
+                        <p class="text-md">
+                            Watch on your TV
+                        </p>
+                        <p class="text-dark">
+                            Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+                            players and more.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://i.ibb.co/R3r1SPX/tab-content-2-2.png" alt="" />
+                        <p class="text-md">
+                            Watch instantly or download for later
+                        </p>
+                        <p class="text-dark">
+                            Available on phone and tablet, wherever you go.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://i.ibb.co/gDhnwWn/tab-content-2-3.png" alt="" />
+                        <p class="text-md">
+                            Use any computer
+                        </p>
+                        <p class="text-dark">
+                            Watch right on Netflix.com.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-    function calculateFK() {
-        var fahrenh = document.fk.fahrenh.value;
-        var unit = " Kelvin"
-        var con = 32
-        
-        var finalACC = ((fahrenh-32)/1.8)+273.15;
-        
-        document.fk.ad.value = (finalACC.toFixed(2)+unit);
-    
-    }
-    function calculateFC() {
-        var fahrenh = document.fc.fahrenh.value;
-        var unit = " Kelvin"
-        var con = 32
-        var finalACC = (fahrenh-con)/1.8;
-        
-        document.fc.accc.value = (finalACC.toFixed(2)+unit);
-    
-    }
-    function calculateCK() {
-        var fahrenh = document.ck.fahrenh.value;
-        var unit = " Kelvin"
-        var con = 273.15
-        var finalACC = (fahrenh*1)+con;
-        
-        document.ck.adc.value = (finalACC.toFixed(2)+unit);
-    
-    }
-    function calculateKC() {
-        var fahrenh = document.kc.fahrenh.value;
-        var unit = " Kelvin"
-        var con = 32
-        
-        var finalACC = fahrenh-273.15;
-        
-        document.kc.rabiul.value = (finalACC.toFixed(2)+unit);
-    
-    }
-    function calculateKF() {
-        var fahrenh = document.kf.fahrenh.value;
-        var unit = " Kelvin"
-        var con = 32
-        
-        var finalACC = ((fahrenh-273.15)*1.8)+32;
-        
-        document.kf.roko.value = (finalACC.toFixed(2)+unit);
-    
-    }
-</script>
+            <!-- Tab Content 3 -->
+            <div id="tab-3-content" class="tab-content-item">
+                <div class="text-center">
+                    <p class="text-lg">
+                        Choose one plan and watch everything on Netflix.
+                    </p>
+                    <a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+                </div>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Basic</th>
+                            <th>Standard</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly price after free month ends on 6/19/19</td>
+                            <td>$8.99</td>
+                            <td>$12.99</td>
+                            <td>$15.99</td>
+                        </tr>
+                        <tr>
+                            <td>HD Available</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Ultra HD Available</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Screens you can watch on at the same time</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Watch on your laptop, TV, phone and tablet</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Unlimited movies and TV shows</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Cancel anytime</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>First month free</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Questions? Call 1-866-579-7172</p>
+        <div class="footer-cols">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Ways To Watch</a></li>
+                <li><a href="#">Corporate Information</a></li>
+                <li><a href="#">Netflix Originals</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Redeem Gift Cards</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Speed Test</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Buy Gift Cards</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Legal Notices</a></li>
+            </ul>
+        </div>
+
+    </footer>
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+</body>
 </html>
